@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { BASE_URL } from "../constants";
+import React, { useEffect, useState } from 'react';
+import { BASE_URL } from '../constants';
 
 const ControlDormancy = () => {
   const [isDormant, setIsDormant] = useState(false);
@@ -17,21 +17,21 @@ const ControlDormancy = () => {
   });
 
   const handleChange = async () => {
-    console.log("===  ===");
+    console.log('===  ===');
     const params = {
-      method: "POST",
+      method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({ isDormant: !isDormant }),
     };
 
     const data = await fetch(`${BASE_URL}/css-keylogger/dormant`, params);
     const dataJson = await data.json();
-    console.log('dataJson: ', dataJson)
-    
+    console.log('dataJson: ', dataJson);
+
     setIsDormant(dataJson.isDormant);
-    window.location.reload()
+    window.location.reload();
   };
 
   return (

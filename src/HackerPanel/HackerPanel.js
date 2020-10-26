@@ -1,6 +1,6 @@
-import React from "react";
-import ControlDormancy from "./ControlDormancy";
-import LoggedKeysList from "./LoggedKeysList";
+import React from 'react';
+import ControlDormancy from './ControlDormancy';
+import LoggedKeysList from './LoggedKeysList';
 
 const HackerPanel = () => (
   <div className="card">

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { BASE_URL } from "../constants";
+import React, { useEffect, useState } from 'react';
+import { BASE_URL } from '../constants';
 
 const LoggedKeysList = () => {
   const [data, setData] = useState([]);
